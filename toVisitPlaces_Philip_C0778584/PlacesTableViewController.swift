@@ -112,7 +112,7 @@ class PlacesTableViewController: UITableViewController {
         defaults.set(true, forKey: "bool")
         defaults.set(indexPath.row, forKey: "edit")
         
-        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "newVC") as! PlaceEditViewController
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "newVC") as! FavoritePlaceViewController
         self.navigationController?.pushViewController(newVC, animated: true)
 
     }

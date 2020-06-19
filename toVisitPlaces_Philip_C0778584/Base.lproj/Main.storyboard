@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fCL-wT-dMv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -58,16 +58,30 @@
             </objects>
             <point key="canvasLocation" x="452" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Place View Controller-->
         <scene sceneID="PEw-ah-7fh">
             <objects>
-                <viewController id="OL7-hy-xfn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newVC" id="OL7-hy-xfn" customClass="FavoritePlaceViewController" customModule="toVisitPlaces_Philip_C0778584" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3J1-Pe-zri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Vmt-XH-3uv">
+                                <rect key="frame" x="20" y="74" width="374" height="768"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vmt-XH-3uv" firstAttribute="top" secondItem="lBq-9Q-IeR" secondAttribute="top" constant="30" id="1vm-JP-HoT"/>
+                            <constraint firstItem="lBq-9Q-IeR" firstAttribute="bottom" secondItem="Vmt-XH-3uv" secondAttribute="bottom" constant="20" id="U1k-Ax-zSg"/>
+                            <constraint firstItem="Vmt-XH-3uv" firstAttribute="leading" secondItem="lBq-9Q-IeR" secondAttribute="leading" constant="20" id="Xhk-nR-4Xj"/>
+                            <constraint firstItem="lBq-9Q-IeR" firstAttribute="trailing" secondItem="Vmt-XH-3uv" secondAttribute="trailing" constant="20" id="onA-uB-p7F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lBq-9Q-IeR"/>
                     </view>
+                    <connections>
+                        <outlet property="editMap" destination="Vmt-XH-3uv" id="v2O-ce-YOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vo-8u-wj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +140,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8M-5b-IcO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="132"/>
+            <point key="canvasLocation" x="-291" y="132"/>
         </scene>
     </scenes>
     <resources>

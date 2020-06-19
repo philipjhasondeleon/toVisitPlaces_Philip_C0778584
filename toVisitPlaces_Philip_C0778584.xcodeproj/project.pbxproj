@@ -15,6 +15,7 @@
 		6CB99491249C4A6500D4F2A1 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB99490249C4A6500D4F2A1 /* PlacesTableViewController.swift */; };
 		6CB99493249C4AE400D4F2A1 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB99492249C4AE400D4F2A1 /* Places.swift */; };
 		6CB99495249C50BC00D4F2A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB99494249C50BC00D4F2A1 /* MapViewController.swift */; };
+		6CB9949B249C54E300D4F2A1 /* FavoritePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9949A249C54E300D4F2A1 /* FavoritePlaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6CB99490249C4A6500D4F2A1 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		6CB99492249C4AE400D4F2A1 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		6CB99494249C50BC00D4F2A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6CB9949A249C54E300D4F2A1 /* FavoritePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6C4AA65C249824C500E5D4D6 /* AppDelegate.swift */,
 				6C4AA65E249824C500E5D4D6 /* SceneDelegate.swift */,
 				6CB99494249C50BC00D4F2A1 /* MapViewController.swift */,
+				6CB9949A249C54E300D4F2A1 /* FavoritePlaceViewController.swift */,
 				6CB99490249C4A6500D4F2A1 /* PlacesTableViewController.swift */,
 				6C4AA662249824C500E5D4D6 /* Main.storyboard */,
 				6C4AA665249824C800E5D4D6 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB9949B249C54E300D4F2A1 /* FavoritePlaceViewController.swift in Sources */,
 				6CB99491249C4A6500D4F2A1 /* PlacesTableViewController.swift in Sources */,
 				6C4AA65D249824C500E5D4D6 /* AppDelegate.swift in Sources */,
 				6C4AA65F249824C500E5D4D6 /* SceneDelegate.swift in Sources */,

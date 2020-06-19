@@ -31,8 +31,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        self.navigationController?.view.tintColor = .systemPink
-//        self.navigationItem.leftBarButtonItem?.title = "Back"
+        self.navigationController?.view.tintColor = .systemBlue
         
          let backButton = UIBarButtonItem()
             backButton.title = "Back"
@@ -74,7 +73,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         places?.append(place)
                     }
                 }
-//                print(places?.count)
             }
             catch{
                 print(error)
@@ -110,14 +108,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
            self.mapView.removeAnnotations(mapAnnotations)
            let tapLocation = recognizer.location(in: mapView)
            self.destinationCoordinates = mapView.convert(tapLocation, toCoordinateFrom: mapView)
-               
-               
+
                if recognizer.state == .ended
                {
                    
                     let annotation = MKPointAnnotation()
                     annotation.coordinate = self.destinationCoordinates!
-//                    annotation.title = "Your destination"
+
                 let geocoder = CLGeocoder()
                 geocoder.reverseGeocodeLocation(CLLocation(latitude: destinationCoordinates.latitude, longitude: destinationCoordinates.longitude)) { (placemarks, error) in
                     if let places = placemarks {
@@ -152,8 +149,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBAction func locationBtn(_ sender: UIButton) {
          getRoute()
     }
-    
-    
        func getRoute() {
           
                   let sourceCoordinate = mapView.userLocation.coordinate
@@ -247,7 +242,7 @@ extension MapViewController {
             }
         
                 let pinAnnotation = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "marker")
-                pinAnnotation.markerTintColor = .systemPink
+                pinAnnotation.markerTintColor = .systemBlue
                 pinAnnotation.glyphTintColor = .white
                 pinAnnotation.canShowCallout = true
         
@@ -277,11 +272,11 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     let renderer = MKPolylineRenderer(overlay: overlay)
 
     if (destCoordinate.transportType == .automobile){
-                    renderer.strokeColor = UIColor.orange
+                    renderer.strokeColor = UIColor.black
                     renderer.lineWidth = 5.0
                     return renderer
     }  else if (destCoordinate.transportType == .walking){
-                    renderer.strokeColor = UIColor.blue
+                    renderer.strokeColor = UIColor.black
                     renderer.lineDashPattern = [2,4]
                     renderer.lineWidth = 5.0
                     return renderer
