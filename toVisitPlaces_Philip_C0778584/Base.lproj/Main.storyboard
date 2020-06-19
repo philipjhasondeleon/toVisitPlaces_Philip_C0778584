@@ -59,9 +59,24 @@
             <point key="canvasLocation" x="452" y="132"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="PEw-ah-7fh">
+            <objects>
+                <viewController id="OL7-hy-xfn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3J1-Pe-zri">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lBq-9Q-IeR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vo-8u-wj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="132"/>
+        </scene>
+        <!--Map View Controller-->
         <scene sceneID="9m3-eS-WoZ">
             <objects>
-                <viewController id="8n4-r0-TVy" sceneMemberID="viewController">
+                <viewController id="8n4-r0-TVy" customClass="MapViewController" customModule="toVisitPlaces_Philip_C0778584" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vma-WX-RFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +87,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-Lo-ejg">
                                 <rect key="frame" x="289" y="715" width="72" height="73"/>
                                 <state key="normal" image="arrow_location"/>
+                                <connections>
+                                    <action selector="locationBtn:" destination="8n4-r0-TVy" eventType="touchUpInside" id="rdr-5U-XsX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -86,6 +104,9 @@
                         <viewLayoutGuide key="safeArea" id="B1d-PS-3Ez"/>
                     </view>
                     <navigationItem key="navigationItem" id="DwO-0A-nJj"/>
+                    <connections>
+                        <outlet property="mapView" destination="bDD-At-Q8j" id="nda-7M-7f5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiK-fl-nni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

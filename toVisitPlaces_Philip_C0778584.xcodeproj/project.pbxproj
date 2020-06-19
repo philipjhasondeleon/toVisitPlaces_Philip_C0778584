@@ -44,7 +44,6 @@
 		6C4AA650249824C500E5D4D6 = {
 			isa = PBXGroup;
 			children = (
-				6CB99494249C50BC00D4F2A1 /* MapViewController.swift */,
 				6C4AA65B249824C500E5D4D6 /* toVisitPlaces_Philip_C0778584 */,
 				6C4AA65A249824C500E5D4D6 /* Products */,
 			);
@@ -63,6 +62,7 @@
 			children = (
 				6C4AA65C249824C500E5D4D6 /* AppDelegate.swift */,
 				6C4AA65E249824C500E5D4D6 /* SceneDelegate.swift */,
+				6CB99494249C50BC00D4F2A1 /* MapViewController.swift */,
 				6CB99490249C4A6500D4F2A1 /* PlacesTableViewController.swift */,
 				6C4AA662249824C500E5D4D6 /* Main.storyboard */,
 				6C4AA665249824C800E5D4D6 /* Assets.xcassets */,
